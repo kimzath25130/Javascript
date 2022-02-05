@@ -32,7 +32,6 @@ function equation(num){
     sum = eval(number);
     return sum;
 }
-
 console.log(equation("one + one"));
 console.log(equation("seven * four - two"));
 console.log(equation("one + one + one + one + one"));
