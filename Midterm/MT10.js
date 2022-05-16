@@ -4,9 +4,38 @@ function isValidIP(IP){
     }else
         console.log("false");
 }
+
+function IS(IP) {
+    var namenum = IP.toString();
+    const words = namenum.split(".");
+    var num = [];
+    num[4] = 0,num[3] = 0;
+    for (let index = 0; index < words.length; index++) {
+        var textA = words[1];
+        var numA = textA.toString();
+        const Awords = numA.split("");
+        if (Awords[0] == "0") {
+            words[1] = "1" + words[1];
+        }
+        num[index] = Math.floor(words[index]);
+    }
+    if (num[0] < 999 && num[1] < 100 && num[2] < 100 && num[3] < 100 && num[3] != 0 && num[4] == 0) {
+        var t = "true";
+    }else{
+        t = "false";
+    }
+    console.log(t);
+}
 isValidIP("1.2.3.4");
 isValidIP("1.2.3");
 isValidIP("1.2.3.4.5");
 isValidIP("123.45.67.4");
 isValidIP("123.456.78.90");
 isValidIP("123.045.067.089");
+console.log("...............")
+IS("1.2.3.4");
+IS("1.2.3");
+IS("1.2.3.4.5");
+IS("123.45.67.4");
+IS("123.456.78.90");
+IS("123.045.067.089");

@@ -1,9 +1,15 @@
+let U = {
+    name : "kim",
+    num : 2 
+};
+
 function getBudgets(params) {
-    return params
-      .map(obj => Object.values(obj)[2])
-      .reduce((acc, curr) => acc + curr);
+    var t = 0;
+    t = params[0].budget+params[1].budget+params[2].budget;
+    return t;
 }
 
+console.log(U.name);
 console.log(getBudgets([
     {name: 'John',  age: 21, budget: 23000}, 
     {name: 'Steve',  age: 32, budget: 40000}, 
